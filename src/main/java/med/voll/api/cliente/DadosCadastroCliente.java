@@ -1,6 +1,26 @@
 package med.voll.api.cliente;
 
-import med.voll.api.enderecos.Endereco;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import med.voll.api.enderecos.DadosEndereco;
 
-public record DadosCadastroCliente(String nome, String email, String telefone, String cpf, Endereco endereco) {
+public record DadosCadastroCliente(
+
+        @NotBlank
+        String nome,
+
+        @NotBlank
+        String email,
+
+        @NotBlank
+        String telefone,
+
+        @NotBlank
+        @Pattern(regexp = "\\d{11}")
+        String cpf,
+
+        @Valid
+        DadosEndereco endereco
+) {
 }
