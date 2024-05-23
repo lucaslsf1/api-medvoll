@@ -3,6 +3,7 @@ package med.voll.api.cliente;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import med.voll.api.enderecos.Endereco;
 
@@ -11,6 +12,7 @@ import med.voll.api.enderecos.Endereco;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
+@Getter
 public class Cliente {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
