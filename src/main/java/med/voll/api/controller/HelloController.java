@@ -14,7 +14,7 @@ public class HelloController {
     }
 
     @GetMapping("/hello")
-    public String olaMundo() {
-        return "Olá, Mundo!";
+    public String paginaInicial() {
+        return "Olá, Você acessou a página inicial da API!";
     }
 }
